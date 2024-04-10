@@ -8,7 +8,7 @@ pipeline {
             steps {
                 // Get some code from a GitHub repository
                git 'https://github.com/Kishoor187/apollohospital.git'
-
+ bat "mvn clean verify"
                 
 
                 
@@ -17,15 +17,6 @@ pipeline {
             
         }
         
-        stage{
-            
-            
-            steps{
-                // Run Maven on a Unix agent.
-                bat "mvn clean verify"
-                
-                
-            }
-        }
+      
     }
 }
